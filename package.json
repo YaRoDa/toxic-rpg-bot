@@ -18,5 +18,8 @@
   "homepage": "https://github.com/yagop/toxic-rpg-bot#readme",
   "dependencies": {
     "ioredis": "^4.16.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
   }
 }

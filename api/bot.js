@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
   redis.quit();
 
   res.json({
-    info,,
+    info,
     query: req.query,
     cookies: req.cookies
   });
