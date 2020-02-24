@@ -6,5 +6,5 @@
     "REDIS_DB": 0,
     "REDIS_PASS": "@redislabs-db-30m-1-pass"
   },
-  "regions: ["bru1", "cdg1"]
+  "regions": ["bru1", "cdg1"]
 }
