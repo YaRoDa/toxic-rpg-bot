@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yagop/toxic-rpg-bot/issues"
   },
-  "homepage": "https://github.com/yagop/toxic-rpg-bot#readme"
+  "homepage": "https://github.com/yagop/toxic-rpg-bot#readme",
+  "dependencies": {
+    "ioredis": "^4.16.0"
+  }
 }
