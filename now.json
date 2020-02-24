@@ -1,3 +1,9 @@
 {
-  "version": 2
+  "version": 2,
+  "env": {
+    "REDIS_HOST": "@redislabs-db-30m-1-host",
+    "REDIS_PORT": "@redislabs-db-30m-1-port",
+    "REDIS_DB": "@redislabs-db-30m-1-name",
+    "REDIS_PASS": "@redislabs-db-30m-1-pass"
+  }
 }
