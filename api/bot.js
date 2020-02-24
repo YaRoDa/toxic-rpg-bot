@@ -1,7 +1,7 @@
 const Redis = require("ioredis");
 
 
-module.exports = await (req, res) => {
+module.exports = async (req, res) => {
   const redis = new Redis({
     port: process.env.REDIS_PORT,
     host: process.env.REDIS_HOST,
