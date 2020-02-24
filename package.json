@@ -1,0 +1,19 @@
+{
+  "name": "toxic-rpg-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagop/toxic-rpg-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yagop/toxic-rpg-bot/issues"
+  },
+  "homepage": "https://github.com/yagop/toxic-rpg-bot#readme"
+}
