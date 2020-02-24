@@ -3,7 +3,7 @@
   "env": {
     "REDIS_HOST": "@redislabs-db-30m-1-host",
     "REDIS_PORT": "@redislabs-db-30m-1-port",
-    "REDIS_DB": 0,
+    "REDIS_DB": "0",
     "REDIS_PASS": "@redislabs-db-30m-1-pass"
   },
   "regions": ["bru1", "cdg1"]
