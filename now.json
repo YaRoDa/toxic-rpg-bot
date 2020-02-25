@@ -7,9 +7,9 @@
     "REDIS_PASS": "@redislabs-db-30m-1-pass"
   },
   "regions": ["bru1"],
-  "routes": { 
+  "routes": [{ 
     "src": "/bot",
     "methods": ["POST"], 
     "dest": "/api/bot.js"
-  }
+  }]
 }
