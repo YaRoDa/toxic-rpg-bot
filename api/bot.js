@@ -20,13 +20,13 @@ module.exports = async (req, res) => {
     console.log('req.body %j', req.body);
     const text = req.body.message.text;
     if (text === '/increase') {
-      increase(req, db);
+      await increase(req, db);
     } else if (text === '/reset') {
-      reset(req, db);
+      await reset(req, db);
     } else if (text === '/status') {
-      status(req, db);
+      await status(req, db);
     } else if (text === '/start') {
-      start(req, db);
+      await start(req, db);
     } else {
       console.log('command not found');
     }
