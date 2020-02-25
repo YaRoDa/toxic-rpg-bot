@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
         query: {
           TG_TOKEN: process.env.TG_TOKEN,
         }
-      });
+    });
     const resp = await tgbot.setWebHook(fullUrl);
 
     // Inizialize DB

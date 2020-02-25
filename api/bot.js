@@ -31,6 +31,7 @@ module.exports = async (req, res) => {
     if (text === '/start') {
       start(req, redis);
     }
+    redis.quit();
     res.send('Ok');
   }
 }
