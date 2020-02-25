@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/yagop/toxic-rpg-bot#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "ioredis": "^4.16.0"
   },
   "devDependencies": {
