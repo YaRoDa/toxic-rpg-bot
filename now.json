@@ -4,12 +4,16 @@
     "REDIS_HOST": "@redislabs-db-30m-1-host",
     "REDIS_PORT": "@redislabs-db-30m-1-port",
     "REDIS_DB": "0",
-    "REDIS_PASS": "@redislabs-db-30m-1-pass"
+    "REDIS_PASS": "@redislabs-db-30m-1-pass",
+    "TG_TOKEN": "@toxic-rpg-bot-token"
   },
   "regions": ["bru1"],
   "routes": [{ 
     "src": "/bot",
     "methods": ["POST"], 
     "dest": "/api/bot.js"
+  }, {
+    "src": "/activate",
+    "dest": "/api/activate.js"
   }]
 }
