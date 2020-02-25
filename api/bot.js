@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
 
   redis.quit();
 
-  console.log(req);
+  console.log(req.headers);
 
   res.send('Ok');
 }
