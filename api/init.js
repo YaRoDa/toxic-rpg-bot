@@ -11,8 +11,8 @@ module.exports = async (req, res) => {
             potions: 0,
         });
         const resp = await rodrigo.save();
-        res.status(201).send('User Rodrigo created. %j', resp);
+        res.status(201).send(`User Rodrigo created. ${resp}`);
     } else {
-        res.status(201).send('User rodrigo already exists. %j', found);
+        res.status(201).send(`User rodrigo already exists. ${found}`);
     }
 };
