@@ -1,5 +1,5 @@
 const tg = require('../lib/tgbot');
-const User = require('../lib/db');
+const { User } = require('../lib/db');
 
 const YAGO_ID = 11696011;
 
