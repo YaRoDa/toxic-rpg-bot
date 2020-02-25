@@ -1,5 +1,5 @@
 
-const db = require('../lib/db');
+const { redis } = require('../lib/db');
 const tgbot = require('../lib/tgbot');
 
 const increase = require('../commands/increase');
@@ -9,13 +9,13 @@ const status = require('../commands/status');
 
 
 module.exports = async (req, res) => {
-  const redis = db.connect();
   if (!tgbot.isTgRequest(req)) {
+    console.log('TG_TOKEN not in query');
     res.status(401).send('TG_TOKEN not in query');
   } else {
     if (!req.body || !req.body.message) {
+      console.log('Body not provided nor body.message');
       res.send('Body not provided nor body.message');
-      redis.quit();
       return;
     }
     const text = req.body.message.text;
@@ -31,7 +31,6 @@ module.exports = async (req, res) => {
     if (text === '/start') {
       start(req, redis);
     }
-    redis.quit();
     res.send('Ok');
   }
 }
