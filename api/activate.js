@@ -1,9 +1,12 @@
 const url = require('url');
 
+const db = require('../lib/db');
 const tgbot = require('../lib/tgbot');
 // const db = require('../lib/db');
 
-module.exports = async (req, res, redis) => {
+module.exports = async (req, res) => {
+    const redis = db.connect();
+
     const fullUrl = url.format({
         protocol: 'https',
         hostname: 'toxic-rpg-bot.now.sh',
