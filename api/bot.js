@@ -18,18 +18,18 @@ module.exports = async (req, res) => {
       res.send('Body not provided nor body.message');
       return;
     }
+    console.log('req.body %j', req.body);
     const text = req.body.message.text;
     if (text === '/increase') {
       increase(req, redis);
-    }
-    if (text === '/reset') {
+    } else if (text === '/reset') {
       reset(req, redis);
-    }
-    if (text === '/status') {
+    } else if (text === '/status') {
       status(req, redis);
-    }
-    if (text === '/start') {
+    } else if (text === '/start') {
       start(req, redis);
+    } else {
+      console.log('command not found');
     }
     res.send('Ok');
   }
