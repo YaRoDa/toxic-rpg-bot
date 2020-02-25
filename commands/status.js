@@ -1,18 +1,16 @@
 const tg = require('../lib/tgbot');
+const { User } = require('../lib/db');
 
 // const YAGO_ID = 11696011;
 
-module.exports = async (req, redis) => {
+module.exports = async (req) => {
     // const userId = req.body.message.from.id;
     const chatId = req.body.message.chat.id;
-
-    const toxicity = redis.get('rodrigo:toxicity');
-    const life = await redis.get('rodrigo:life');
-    const potions = await redis.get('rodrigo:potions');
+    const rodrigo = await User.findOne({ name: 'Rodrigo' });
 
     const txt = `Rodrigo stats:
-☣️ Toxicity level: ${toxicity}
-🧪 Potions: ${potions}
-💙 Life: ${life}`;
+☣️ Toxicity level: ${rodrigo.toxicity}
+🧪 Potions: ${rodrigo.potions}
+💙 Life: ${rodrigo.life}`;
       return tg.sendMessage(chatId, txt);
 };

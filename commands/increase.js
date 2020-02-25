@@ -1,16 +1,22 @@
 const tg = require('../lib/tgbot');
+const User = require('../lib/db');
 
 const YAGO_ID = 11696011;
 
-module.exports = async (req, redis) => {
+module.exports = async (req) => {
     const userId = req.body.message.from.id;
     const chatId = req.body.message.chat.id;
     if (userId !== YAGO_ID){
       return tg.sendMessage(chatId, `Sólo un Saiyan puede usar este comando `);
     }
 
-    const toxicity = await redis.incr('rodrigo:toxicity');
+    const rodrigo = await User.findOne({ name: 'Rodrigo' });
+    if (!rodrigo) {
+        throw new Error('Rodrigo not found');
+    }
+    rodrigo.toxicity++;
+    rodrigo.save();
     const txt = `Rodrigo's toxicity ingreased by 1.
-  ☣️ Current toxicity: ${toxicity}`;
+  ☣️ Current toxicity: ${rodrigo.toxicity}`;
     return tg.sendMessage(chatId, txt);
 };
