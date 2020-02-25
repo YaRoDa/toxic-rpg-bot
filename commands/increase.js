@@ -10,7 +10,7 @@ module.exports = async (req) => {
       return tg.sendMessage(chatId, `Sólo un Saiyan puede usar este comando `);
     }
 
-    const rodrigo = await User.findOne({ name: 'Rodrigo' });
+    const rodrigo = await User.findOne({ name: 'Rodrigo' }).exec();
     if (!rodrigo) {
         throw new Error('Rodrigo not found');
     }

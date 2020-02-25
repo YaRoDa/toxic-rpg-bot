@@ -1,7 +1,7 @@
 const { User } = require('../lib/db');
 
 module.exports = async (req, res) => {
-    const found = await User.findOne({ name: 'Rodrigo' });
+    const found = await User.findOne({ name: 'Rodrigo' }).exec();
 
     if (!found) {
         const rodrigo = new User({
