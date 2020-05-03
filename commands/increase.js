@@ -7,7 +7,7 @@ module.exports = async (req) => {
     const userId = req.body.message.from.id;
     const chatId = req.body.message.chat.id;
     if (userId !== YAGO_ID){
-      return tg.sendMessage(chatId, `Sólo un Saiyan puede usar este comando `);
+      return tg.sendMessage(chatId, `Sólo un Programador Asíncrono puede usar este comando `);
     }
 
     const rodrigo = await User.findOne({ name: 'Rodrigo' }).exec();
